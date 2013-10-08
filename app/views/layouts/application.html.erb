@@ -2,11 +2,28 @@
 <html>
 <head>
   <title>Filas</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
+  <%= javascript_include_tag "jquery-2.0.3.min", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag "bootstrap", "data-turbolinks-track" => true %>
+
 </head>
 <body>
+
+<% if !@notice.blank? %>
+    <div class="alert alert-success">
+      <%= @notice %>
+    </div>
+<% end %>
+
+<% if !@alert.blank? %>
+    <div class="alert alert-danger">
+      <%= @alert %>
+    </div>
+<% end %>
+
+
 
 <%= yield %>
 
