@@ -3,13 +3,15 @@ Filas::Application.routes.draw do
   root to: "home#index"
 
   get "filas/atualizar_senha"
+  get "filas/acompanhar_fila"
 
   resources :filas
 
   resources :filas do
     member do
-      get :acompanhar_fila
+      get :acessar_atualizar_senha
       get :atualizar_senha
+      get :acessar_acompanhamento_fila
     end
   end
 

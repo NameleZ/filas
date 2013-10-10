@@ -13,9 +13,13 @@ $(document).ready(function () {
     $(".senha-atual").on("keyup", function () {
         atualizarSenha();
     });
+
+    $(".fila").on("click", function () {
+        window.location = $(this).attr("url");
+    });
 });
 
-function atualizarSenha(){
+function atualizarSenha() {
 
     $.ajax({
         url: "/filas/atualizar_senha",

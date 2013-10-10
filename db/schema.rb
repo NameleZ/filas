@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131009121100) do
+ActiveRecord::Schema.define(version: 20131010200802) do
 
   create_table "filas", force: true do |t|
     t.string   "nome"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20131009121100) do
     t.integer  "user_id",       null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "link"
   end
 
   add_index "filas", ["user_id"], name: "filas_user_id_fk", using: :btree

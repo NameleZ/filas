@@ -13,8 +13,8 @@
 
   <tbody>
   <% @filas.each do |fila| %>
-      <tr>
-        <td><%= fila.nome%></td>
+      <tr class="clicavel fila" url="/filas/<%= fila.id %>/acessar_atualizar_senha" >
+      <td><%= fila.nome%></td>
         <td><%= fila.posicao_atual%></td>
       </tr>
   <% end %>

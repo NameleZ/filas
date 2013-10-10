@@ -1,0 +1,17 @@
+.container {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.centralizado {
+    text-align: center;
+}
+
+.senha{
+    font-size: 100px;
+}
+
+body{
+    background-color: #000000;
+    color: white;
+}
