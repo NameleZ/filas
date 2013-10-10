@@ -2,30 +2,42 @@
 <html>
 <head>
   <title>Filas</title>
-  <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
-  <%= javascript_include_tag "jquery-2.0.3.min", "data-turbolinks-track" => true %>
   <%= stylesheet_link_tag "bootstrap", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag "design", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "jquery-2.0.3.min", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "bootstrap.min", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "script", "data-turbolinks-track" => true %>
 
 </head>
 <body>
 
-<% if !@notice.blank? %>
-    <div class="alert alert-success">
-      <%= @notice %>
-    </div>
-<% end %>
+<header class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">
+  <div class="navbar-header">
+    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+  </div>
+  <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+    <ul class="nav navbar-nav">
+      <li>
+        <a href="/">Início</a>
+      </li>
+      <li>
+        <a href="/filas">Filas</a>
+      </li>
+    </ul>
+  </nav>
+</header>
 
-<% if !@alert.blank? %>
-    <div class="alert alert-danger">
-      <%= @alert %>
-    </div>
-<% end %>
+<div class="container">
 
+  <%= yield %>
 
-
-<%= yield %>
+</div>
 
 </body>
 </html>

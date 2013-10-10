@@ -1,0 +1,55 @@
+.container {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+th, td {
+    text-align: center;
+}
+
+.centralizado {
+    text-align: center;
+}
+
+.clicavel{
+    cursor: pointer;
+}
+
+.senha-atual {
+    font-size: 70px;
+}
+
+.senha-container, .up-down-container{
+    display: inline-block;
+}
+
+.senha-container{
+    width: 300px;
+}
+
+.up {
+    background: url(/assets/up.png) no-repeat 10px;
+    width: 100px;
+    height: 50px;
+}
+
+.down {
+    background: url(/assets/down.png) no-repeat 10px;
+    width: 100px;
+    height: 50px;
+}
+
+@media screen and (max-width: 768px) {
+    .btn {
+        width: 100%;
+        padding-left: 0px;
+        padding-right: 0px;
+        margin-bottom: 5px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .senha-container{
+        width: 160px;
+    }
+}

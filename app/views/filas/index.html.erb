@@ -1,0 +1,22 @@
+
+<a class="btn btn-info" href="/filas/new">Criar fila</a>
+
+<h2>Filas</h2>
+
+<table class="table table-bordered table-hover">
+  <thead>
+  <tr>
+    <th>Nome</th>
+    <th>Posição atual</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @filas.each do |fila| %>
+      <tr>
+        <td><%= fila.nome%></td>
+        <td><%= fila.posicao_atual%></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
