@@ -27,6 +27,10 @@ th, td {
     width: 300px;
 }
 
+.editar-excluir-fila-container{
+    text-align: right;
+}
+
 .up {
     background: url(/assets/up.png) no-repeat 10px;
     width: 100px;

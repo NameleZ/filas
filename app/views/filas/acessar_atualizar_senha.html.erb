@@ -1,16 +1,16 @@
-<input type="hidden" id="id-fila" value="<%= @fila.id %>" >
+<input type="hidden" id="id-fila" value="<%= @fila.id %>">
 
 <h1 class="centralizado"> <%= @fila.nome %> </h1>
 
 <br><br><br>
 
-<div class="centralizado" >
+<div class="centralizado">
 
-  <div class="senha-container" >
-    <h3 class="senha-atual" contenteditable="true" > <%= @fila.posicao_atual %>   </h3>
+  <div class="senha-container">
+    <h3 class="senha-atual" contenteditable="true"> <%= @fila.posicao_atual %>   </h3>
   </div>
 
-  <div class="up-down-container" >
+  <div class="up-down-container">
     <div class="up clicavel">
     </div>
 
@@ -20,6 +20,17 @@
     </div>
 
   </div>
+
+  <br><br><br><br>
+
+  <div class="editar-excluir-fila-container" >
+    <a class="btn btn-warning" href="#">Editar</a>
+    <a class="btn btn-danger" href="#">Excluir</a>
+  </div>
+
+  <br>
+
+  <a href="/filas/<%= @fila.link %>/acessar_acompanhamento_fila"> Link para acompanhamento da fila remotamente </a>
 
 </div>
 
