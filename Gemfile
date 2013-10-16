@@ -41,6 +41,15 @@ group :development do
   gem "binding_of_caller"
 end
 
+group :test do
+  gem 'cucumber-rails', :require => false
+  gem 'database_cleaner'
+end
+
+group :development, :test do
+  gem 'rspec-rails', '~> 2.0'
+end
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
