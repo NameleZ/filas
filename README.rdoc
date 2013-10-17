@@ -1,1 +1,14 @@
-Filas
+= Filas
+
+== Funcionalidades a criar
+
+O que teremos que fazer:
+
+* Habilitar múltiplas chamadas de senha numa mesma fila (várias mesas de atendimento) e adaptar o display para isso
+* Criar um cadastro para funcionários, com o fim de contabilizar os atendimentos que eles fizeram
+* Possibilitar o uso do nome do cliente na chamada da senha
+* Disponibilidade de filas designadas por tipo (idosos ou VIPs, por exemplo - ou tipo de problema, no caso da emergência), bem como cadastrar as "mesas" que devem atender certo tipo de pessoa
+* Página de estatísticas: Média de visitas por hora; tempo mínimo, médio e máximo de espera; visitantes diários; histórico de visitas dos clientes; histórico de atendimento das mesas
+* Administração da fila: Ver quantas/quais pessoas estão esperando, chamar pessoas fora de ordem da fila e remover tickets. Além disso ser possível também adicionar pessoas na fila manualmente
+* Disponibilizar APIs para outros tipos de integração
+* Possibilidade de mudança de cores e adição de logo ou background no monitor e aplicativo
