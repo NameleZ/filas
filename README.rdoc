@@ -11,4 +11,4 @@ O que teremos que fazer:
 * Página de estatísticas: Média de visitas por hora; tempo mínimo, médio e máximo de espera; visitantes diários; histórico de visitas dos clientes; histórico de atendimento das mesas
 * Administração da fila: Ver quantas/quais pessoas estão esperando, chamar pessoas fora de ordem da fila e remover tickets. Além disso ser possível também adicionar pessoas na fila manualmente
 * Disponibilizar APIs para outros tipos de integração
-* Possibilidade de mudança de cores e adição de logo ou background no monitor e aplicativo
+* Possibilidade de mudança de cores e adição de logo ou background no monitor e aplicativo.
