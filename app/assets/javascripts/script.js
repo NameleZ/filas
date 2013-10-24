@@ -1,5 +1,4 @@
-$(document).ready(function () {
-
+$(document).on("page:load", function () {
     $(".up").on("click", function () {
         $(".senha-atual").text(parseInt($(".senha-atual").text()) + 1);
         atualizarSenha();
@@ -18,6 +17,7 @@ $(document).ready(function () {
         window.location = $(this).attr("url");
     });
 });
+
 
 function atualizarSenha() {
 
