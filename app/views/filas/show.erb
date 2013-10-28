@@ -29,8 +29,7 @@
   </div>
 
   <br>
-
-  <a href="/filas/<%= @fila.link %>/acessar_acompanhamento_fila"> Link para acompanhamento da fila remotamente </a>
+  <%= link_to " Link para acompanhamento da fila remotamente", :action => "acessar_acompanhamento_fila", :id => @fila.link %>
 
 </div>
 

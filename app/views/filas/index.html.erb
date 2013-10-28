@@ -1,5 +1,5 @@
 
-<a class="btn btn-info" href="/filas/new">Criar fila</a>
+<%= link_to "Criar fila", new_fila_path, class: "btn btn-info" %>
 
 <h2>Filas</h2>
 
@@ -13,9 +13,9 @@
 
   <tbody>
   <% @filas.each do |fila| %>
-      <tr class="clicavel fila" url="/filas/<%= fila.id %>/acessar_atualizar_senha" >
-      <td><%= fila.nome%></td>
-        <td><%= fila.posicao_atual%></td>
+      <tr class="clicavel fila" url="<%= fila_path fila %>">
+        <td><%= link_to fila.nome, fila_path(fila) %></td>
+        <td><%= fila.posicao_atual %></td>
       </tr>
   <% end %>
   </tbody>

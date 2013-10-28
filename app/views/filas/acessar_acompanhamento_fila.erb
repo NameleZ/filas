@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title><%= @fila.nome %></title>
+      <%= csrf_meta_tags %>
+      <%= stylesheet_link_tag "design-acompanhamento", "data-turbolinks-track" => true %>
+      <%= javascript_include_tag "jquery-2.0.3.min", "data-turbolinks-track" => true %>
+      <%= javascript_include_tag "script-acompanhamento", "data-turbolinks-track" => true %>
+
+    </head>
+    <body>
+
+        <input type="hidden" id="hash-fila" value="<%= @fila.link %>">
+
+        <div class="container">
+
+          <h1 class="centralizado"> <%= @fila.nome %> </h1>
+
+          <h1 class="centralizado senha"> <%= @fila.posicao_atual %> </h1>
+
+        </div>
+
+    </body>
+</html>

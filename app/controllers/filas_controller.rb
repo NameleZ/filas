@@ -1,5 +1,5 @@
 class FilasController < ApplicationController
-  before_action :set_fila, only: [:show, :edit, :update, :acessar_atualizar_senha]
+  before_action :set_fila, only: [:show, :edit, :update, :show]
   before_filter :authenticate_user!, except: [:acompanhar_fila, :acessar_acompanhamento_fila]
 
   @@filas_hash = Hash.new
@@ -20,10 +20,7 @@ class FilasController < ApplicationController
 
     respond_to do |format|
       if @fila.save
-
-        @fila.link = (Digest::MD5.hexdigest @fila.id.to_s << @fila.nome)
-        @fila.save
-
+        @@filas_hash[fila.link] = fila.posicao_atual
         format.html { redirect_to action: 'index' }
         format.json { render action: 'show', status: :created, location: @fila }
       else
@@ -33,11 +30,13 @@ class FilasController < ApplicationController
     end
   end
 
-  def acessar_atualizar_senha
+  def show
 
     if @fila.user != current_user
       redirect_to action: 'index'
     end
+
+    @@filas_hash[@fila.link] = @fila.posicao_atual
 
   end
 
@@ -65,9 +64,7 @@ class FilasController < ApplicationController
   end
 
   def acompanhar_fila
-
     render :json => {:status => :ok, :posicao => @@filas_hash[params[:id]].to_json}
-
   end
 
   private

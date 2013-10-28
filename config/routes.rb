@@ -9,7 +9,6 @@ Filas::Application.routes.draw do
 
   resources :filas do
     member do
-      get :acessar_atualizar_senha
       get :atualizar_senha
       get :acessar_acompanhamento_fila
     end
